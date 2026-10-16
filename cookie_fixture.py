@@ -8,6 +8,6 @@ app = Flask(__name__)
 def controlled_fixture():
     response = make_response("Synthetic test only")
     response.set_cookie(
-        "sessionid", value="synthetic-test-only", secure=True, httponly=True, samesite="Strict"
+        "sessionid", value="synthetic-test-only", secure=False, httponly=True, samesite="Strict"
     )
     return response
