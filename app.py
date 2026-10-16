@@ -7,5 +7,5 @@ app = Flask(__name__)
 @app.route("/test")
 def test():
     resp = make_response()
-    resp.set_cookie("authKey", "value1")
+    resp.set_cookie("authKey", "value1", secure=True, httponly=True, samesite="Strict")
     return resp
